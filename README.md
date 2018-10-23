@@ -56,3 +56,9 @@ __不过值得注意的是，我删除了网址（每个学校情况不一样）
 
 
 CREATE BY [ECHOCOW](https://echocow.cn)
+
+### 2018-10-23 更新
+添加 maven-shade-plugin 打包插件，可将其打包成可执行的 jar 包。
+
+- DrcomTools-1.0-SNAPSHOT-server.jar   ——>   server 
+- DrcomTools-1.0-SNAPSHOT-web.jar      ——>   web

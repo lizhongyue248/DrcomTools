@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 /**
  * ServerVerticle
- *      server 端，发送请求
+ *      server 端，接受处理请求
  *
  * @author echo
  * @version 1.0
@@ -29,6 +29,7 @@ public class ServerVerticle extends AbstractVerticle {
      *      当运行多个时，请关闭 idea 的 Single instance only
      */
     public static void main(String[] args) {
+        LOGGER.info("ServerVerticle Start......");
         Runner.runHazelcast(ServerVerticle.class);
     }
 

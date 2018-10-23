@@ -18,13 +18,15 @@ import io.vertx.core.logging.LoggerFactory;
  */
 public class WebVerticle extends AbstractVerticle {
     private static final Logger LOGGER = LoggerFactory.getLogger(ServerVerticle.class);
-    private long userName = 5014933;
+//    private long userName = 5014933;
+    private long userName = 6010000;
 
     /**
      * web 启动入口
      *      当运行多个时，请关闭 idea 的 Single instance only
      */
     public static void main(String[] args) {
+        LOGGER.info("WebVerticle Start......");
         Runner.runHazelcast(WebVerticle.class);
     }
 
@@ -43,6 +45,7 @@ public class WebVerticle extends AbstractVerticle {
             data.put("DDDDD", "0" + userName)
                     .put("upass", Md5Util.getPassword("" + userName));
             eb.send(ServerVerticle.class.getName(), data);
+            LOGGER.info("0" + userName + " Send Request!......");
             userName ++;
         });
 
